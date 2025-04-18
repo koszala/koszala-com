@@ -1,6 +1,18 @@
-<div class="h-screen flex justify-center items-center">
-<section class="text-center">
-  <h1 class="text-2xl text-slate-400">koszala.com</h1>
-  <p class="text-slate-300 animate-pulse">soon...</p>
-</section>
+<div>
+	<section>
+		<h1>koszala.com</h1>
+		<p>soon...</p>
+	</section>
 </div>
+
+<style scoped>
+	div {
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	section {
+		text-align: center;
+	}
+</style>

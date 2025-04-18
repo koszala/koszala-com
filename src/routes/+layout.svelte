@@ -3,16 +3,23 @@
 	let { children } = $props();
 </script>
 
-{@render children()}
+<main>
+	{@render children()}
+</main>
+
 <ul>
-	<li class="pr-2"><a href="/new">new</a></li>
-	<li class="pr-2"><a href="/read">read</a></li>
-	<li class="pr-2"><a href="/listen">listen</a></li>
-	<li class="pr-2"><a href="/look">look</a></li>
-	<li class="pr-2"><a href="/try">try</a></li>
+	<li><a href="/read">read</a></li>
+	<!--<li><a href="/new">new</a></li>
+	<li><a href="/listen">listen</a></li>
+	<li><a href="/look">look</a></li>
+	<li><a href="/try">try</a></li>-->
 </ul>
 
 <style>
+	main {
+		max-width: 1280px;
+		margin: 0 auto;
+	}
 	ul {
 		position: fixed;
 		bottom: 0;
@@ -27,6 +34,12 @@
 		display: block;
 		font-size: 1rem;
 		text-decoration: none;
+		font-size: 2rem;
+		color: #666;
+	}
+	ul > li > a:not(:last-child)::after {
+		content: '-';
+		padding-left: 0.5rem;
 	}
 	@media screen and (min-width: 768px) {
 		ul {
@@ -34,7 +47,6 @@
 			bottom: 1rem;
 		}
 		ul > li > a {
-			font-size: 2rem;
 			transition: transform 0.3s ease-in-out;
 		}
 		ul > li > a:hover {
