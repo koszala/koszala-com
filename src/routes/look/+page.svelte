@@ -2,7 +2,7 @@
 	export let data;
 </script>
 
-<h1>Lista rzeczy do przeczytania</h1>
+<h1>Lista rzeczy do obejrzenia</h1>
 <ul>
 	{#each data.posts as post}
 		<li>

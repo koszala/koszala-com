@@ -9,9 +9,9 @@
 
 <ul>
 	<li><a href="/read">read</a></li>
+	<li><a href="/look">look</a></li>
 	<!--<li><a href="/new">new</a></li>
 	<li><a href="/listen">listen</a></li>
-	<li><a href="/look">look</a></li>
 	<li><a href="/try">try</a></li>-->
 </ul>
 

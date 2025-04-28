@@ -7,7 +7,7 @@
 	<p>Published: {data.date}</p>
 
 	<svelte:component this={data.content} />
-	<p><a href="/read">Back to list</a></p>
+	<p><a href="/look">Back to list</a></p>
 </div>
 
 <style>
