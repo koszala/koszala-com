@@ -1,8 +1,7 @@
 <script>
-  import { base } from '$app/paths';
+	import { base } from '$app/paths';
 	import '../app.css';
 	let { children } = $props();
-</script>
 </script>
 
 <main>
