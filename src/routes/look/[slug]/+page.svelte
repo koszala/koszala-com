@@ -1,4 +1,5 @@
 <script>
+	import { base } from '$app/paths';
 	export let data;
 </script>
 
@@ -7,7 +8,7 @@
 	<p>Published: {data.date}</p>
 
 	<svelte:component this={data.content} />
-	<p><a href="/look">Back to list</a></p>
+	<p><a href="{base}/look">Back to list</a></p>
 </div>
 
 <style>
