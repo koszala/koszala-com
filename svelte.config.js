@@ -10,7 +10,8 @@ const config = {
       fallback: undefined,
       precompress: false,
       strict: true
-    })
+    }),
+    paths: { relative: false },
   },
   extensions: ['.svelte', '.md'],
   preprocess: [mdsvex({
