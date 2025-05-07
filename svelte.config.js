@@ -13,8 +13,8 @@ const config = {
       strict: true
     }),
     paths: {
-			base: process.argv.includes('dev') ? '' : 'koszala.github.io'
-		}
+        base: process.env.NODE_ENV === 'production' ? '/koszala-com' : '',
+    }
   },
   extensions: ['.svelte', '.md'],
   preprocess: [mdsvex({
