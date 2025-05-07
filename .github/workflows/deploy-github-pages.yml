@@ -56,7 +56,7 @@ jobs:
 
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: 'https://koszala.github.io'
 
     steps:
       - name: Deploy
