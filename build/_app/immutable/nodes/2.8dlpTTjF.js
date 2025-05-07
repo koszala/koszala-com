@@ -1,0 +1,1 @@
+import{t as a,a as s}from"../chunks/Bgt7VMb2.js";import"../chunks/oyTyFDB5.js";var t=a('<div class="svelte-1i7neuh"><section class="svelte-1i7neuh"><h1>koszala.com</h1> <p>soon...</p></section></div>');function p(o){var e=t();s(o,e)}export{p as component};
