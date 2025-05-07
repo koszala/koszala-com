@@ -5,13 +5,16 @@ import { mdsvex } from 'mdsvex';
 const config = {
   kit: {
     adapter: adapter({
+      fallback: '404.html',
       pages: 'build',
       assets: 'build',
       fallback: undefined,
       precompress: false,
       strict: true
     }),
-    paths: { relative: false },
+    paths: {
+			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
+		}
   },
   extensions: ['.svelte', '.md'],
   preprocess: [mdsvex({
