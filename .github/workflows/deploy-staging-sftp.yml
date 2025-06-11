@@ -1,4 +1,4 @@
-name: Deploy to staging sftp
+name: Deploy to staging SFTP
 
 on:
   push:
