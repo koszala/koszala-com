@@ -9,6 +9,7 @@
 </main>
 
 <ul>
+	<li><a href="{base}/">home</a></li>
 	<li><a href="{base}/read">read</a></li>
 	<li><a href="{base}/look">look</a></li>
 	<!--<li><a href="/new">new</a></li>

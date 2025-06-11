@@ -1,7 +1,12 @@
+<script>
+	export let data;
+  console.log(data);
+</script>
 <div>
 	<section>
 		<h1>koszala.com</h1>
 		<p>soon...</p>
+    <p>Slider kicks in</p>
 	</section>
 </div>
 
