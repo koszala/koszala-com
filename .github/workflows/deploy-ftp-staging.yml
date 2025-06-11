@@ -67,7 +67,7 @@ jobs:
           remote-password: ${{ secrets.STAGING_FTP_PASSWORD }}
 
           # Path for specific folder on server for files deployment
-          remote-path: /
+          remote-path: .
 
           # Port for SFTP access to server
           remote-port: 21
