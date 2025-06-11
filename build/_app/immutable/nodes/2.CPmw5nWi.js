@@ -1,1 +1,0 @@
-import{f as p,a as t}from"../chunks/CLSDVue5.js";import"../chunks/freBAQr9.js";import{p as i}from"../chunks/COSICJMU.js";var n=p('<div class="svelte-1i7neuh"><section class="svelte-1i7neuh"><h1>koszala.com</h1> <p>soon...</p> <p>Slider kicks in</p></section></div>');function m(o,a){let s=i(a,"data",8);console.log(s());var e=n();t(o,e)}export{m as component};
