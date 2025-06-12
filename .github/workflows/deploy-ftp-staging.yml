@@ -59,6 +59,7 @@ jobs:
       - name: SFTP-Deploy-Action
         uses: milanmk/actions-file-deployer@master
         with:
+          sync: full
           remote-protocol: ftp
           remote-host: ${{ secrets.STAGING_FTP_HOST }}
           remote-user: ${{ secrets.STAGING_FTP_USER }}
