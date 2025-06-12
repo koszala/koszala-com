@@ -67,7 +67,7 @@ jobs:
 
           # local-path: build
           # Path for specific folder on server for files deployment
-          remote-path: /test
+          remote-path: /koszala-com
 
           # Port for SFTP access to server
           remote-port: 21
