@@ -64,7 +64,7 @@ jobs:
           remote-user: ${{ secrets.STAGING_FTP_USER }}
           remote-password: ${{ secrets.STAGING_FTP_PASSWORD }}
 
-          local-path: build
+          # local-path: build
           # Path for specific folder on server for files deployment
           remote-path: /test
 
