@@ -7,7 +7,7 @@
 	<section>
 		<h1>koszala.com</h1>
 		<p>soon...</p>
-		<p>Slider kicks in now</p>
+		<p>Slider kicks in now!</p>
 	</section>
 </div>
 
