@@ -7,7 +7,7 @@
 	<section>
 		<h1>koszala.com</h1>
 		<p>soon...</p>
-		<p>Slider kicks in now!</p>
+		<p>loading slider</p>
 	</section>
 </div>
 
@@ -20,5 +20,8 @@
 	}
 	section {
 		text-align: center;
+	}
+	p {
+		color: #999;
 	}
 </style>
