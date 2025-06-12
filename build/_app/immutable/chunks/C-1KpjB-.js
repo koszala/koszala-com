@@ -1,0 +1,1 @@
+import{f as o,a as e}from"./CLSDVue5.js";import"./freBAQr9.js";const m={title:"Looka at me again",date:"2022-04-13"},{title:i,date:s}=m;var p=o("<p>Pisać każdy może.</p>");function n(a){var t=p();e(a,t)}export{n as default,m as metadata};
