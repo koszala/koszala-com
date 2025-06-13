@@ -1,0 +1,1 @@
+import{f as o,a as r}from"./C4oqaVVS.js";import"./vWT_a2yL.js";const e={title:"Trzeci post jest najlepszy",date:"2025-05-07"},{title:i,date:m}=e;var p=o("<p>Trochę ręczna robota, ale co zrobić</p>");function n(t){var a=p();r(t,a)}export{n as default,e as metadata};

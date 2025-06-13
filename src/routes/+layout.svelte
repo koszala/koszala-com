@@ -19,15 +19,16 @@
 
 <style>
 	main {
-		max-width: 1280px;
 		margin: 0 auto;
 	}
 	ul {
 		position: fixed;
-		bottom: 0;
+		bottom: -10rem;
 		right: 0;
 		display: flex;
+		padding: 0.5rem 1rem;
 		list-style: none;
+		background-color: #ccc;
 	}
 	ul > li {
 		padding-right: 0.5rem;
@@ -40,14 +41,9 @@
 		color: #666;
 	}
 	ul > li > a:not(:last-child)::after {
-		content: '-';
 		padding-left: 0.5rem;
 	}
 	@media screen and (min-width: 768px) {
-		ul {
-			right: 1rem;
-			bottom: 1rem;
-		}
 		ul > li > a {
 			transition: transform 0.3s ease-in-out;
 		}

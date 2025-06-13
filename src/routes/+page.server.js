@@ -1,3 +1,4 @@
+/** @type {import('./$types').PageLoad} */
 export async function load() {
   const assetsBaseUrl = 'https://koszala.com';
   return {
