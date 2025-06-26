@@ -5,7 +5,7 @@
 </script>
 
 <header>
-  <a href="{base}/">koszala.com</a>
+	<a href="{base}/">koszala.com</a>
 </header>
 <main>
 	{@render children()}
@@ -21,24 +21,26 @@
 </ul>
 
 <style>
-  header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
-  }
-  header a {
-    display: block;
-    padding: .5rem 1rem;
-    text-shadow: 0 0 3px white;
-    font-weight: 500;
-  }
+	header {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 10;
+	}
+	header a {
+		display: block;
+		padding: 0.5rem 1rem;
+		text-shadow: 0 0 3px white;
+		font-weight: 500;
+	}
 	main {
 		margin: 0 auto;
+		height: 100%;
 	}
 	ul {
 		position: fixed;
 		bottom: -10rem;
+		height: 0;
 		right: 0;
 		display: flex;
 		padding: 0.5rem 1rem;

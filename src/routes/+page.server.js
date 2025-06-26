@@ -5,6 +5,17 @@ export async function load() {
     items:
       [
         {
+          desktop: assetsBaseUrl + "/photos/0000-connection-desktop.jpg",
+          mobile: assetsBaseUrl + "/photos/0000-connection-mobile.jpg",
+          meta: {
+            name: "Connection",
+            description: "Some rubbish on the beach",
+            camera: "Canon EOS R50",
+            date: "2024-12-25",
+            location: "Uciechów, Poland"
+          }
+        },
+        {
           desktop: assetsBaseUrl + "/photos/desktop/001.jpg",
           tablet: assetsBaseUrl + "/photos/tablet/001.jpg",
           mobile: assetsBaseUrl + "/photos/mobile/001.jpg",
