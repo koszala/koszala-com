@@ -9,7 +9,7 @@ export async function load() {
           mobile: assetsBaseUrl + "/photos/0000-connection-mobile.jpg",
           meta: {
             name: "Connection",
-            description: "Some rubbish on the beach",
+            description: "What's connected, should stay connected",
             camera: "Canon EOS R50",
             date: "2024-12-25",
             location: "Uciechów, Poland"
@@ -17,7 +17,6 @@ export async function load() {
         },
         {
           desktop: assetsBaseUrl + "/photos/desktop/001.jpg",
-          tablet: assetsBaseUrl + "/photos/tablet/001.jpg",
           mobile: assetsBaseUrl + "/photos/mobile/001.jpg",
           meta: {
             name: "A Tree",
@@ -29,7 +28,6 @@ export async function load() {
         },
         {
           desktop: assetsBaseUrl + "/photos/desktop/002.jpg",
-          tablet: assetsBaseUrl + "/photos/tablet/002.jpg",
           mobile: assetsBaseUrl + "/photos/mobile/002.jpg",
           meta: {
             name: "Grass silhouette",
@@ -41,7 +39,6 @@ export async function load() {
         },
         {
           desktop: assetsBaseUrl + "/photos/desktop/003.jpg",
-          tablet: assetsBaseUrl + "/photos/tablet/003.jpg",
           mobile: assetsBaseUrl + "/photos/mobile/003.jpg",
           meta: {
             name: "Well...",
@@ -53,7 +50,6 @@ export async function load() {
         },
         {
           desktop: assetsBaseUrl + "/photos/desktop/004.jpg",
-          tablet: assetsBaseUrl + "/photos/tablet/004.jpg",
           mobile: assetsBaseUrl + "/photos/mobile/004.jpg",
           meta: {
             name: "Glass, sky, woman",
@@ -65,7 +61,6 @@ export async function load() {
         },
         {
           desktop: assetsBaseUrl + "/photos/desktop/005.jpg",
-          tablet: assetsBaseUrl + "/photos/tablet/005.jpg",
           mobile: assetsBaseUrl + "/photos/mobile/005.jpg",
           meta: {
             name: "Italian sunset",
@@ -77,7 +72,6 @@ export async function load() {
         },
         {
           desktop: assetsBaseUrl + "/photos/desktop/006.jpg",
-          tablet: assetsBaseUrl + "/photos/tablet/006.jpg",
           mobile: assetsBaseUrl + "/photos/mobile/006.jpg",
           meta: {
             name: "Sunset and the wood",
@@ -89,7 +83,6 @@ export async function load() {
         },
         {
           desktop: assetsBaseUrl + "/photos/desktop/007.jpg",
-          tablet: assetsBaseUrl + "/photos/tablet/007.jpg",
           mobile: assetsBaseUrl + "/photos/mobile/007.jpg",
           meta: {
             name: "Italian job",
@@ -101,7 +94,6 @@ export async function load() {
         },
         {
           desktop: assetsBaseUrl + "/photos/desktop/008.jpg",
-          tablet: assetsBaseUrl + "/photos/tablet/008.jpg",
           mobile: assetsBaseUrl + "/photos/mobile/008.jpg",
           meta: {
             name: "Handy",
