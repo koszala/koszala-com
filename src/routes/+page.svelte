@@ -1,17 +1,17 @@
 <script>
 	/** @type {import('./$types').PageProps} */
 	let { data } = $props();
-	let displayTime = 2 * 1000;
-	let activePhoto = $state(data.items.length);
+	let displayTime = 5 * 1000;
+	let activePhoto = $state(1);
 	let paused = $state(false);
 	let changePhotoInterval = setInterval(changePhoto, displayTime);
 
 	function changePhoto() {
-		if (activePhoto == 1) {
-			activePhoto = data.items.length;
+		if (activePhoto === data.items.length) {
+			activePhoto = 1;
 			return;
 		}
-		activePhoto -= 1;
+		activePhoto += 1;
 	}
 	function pause() {
 		clearInterval(changePhotoInterval);
@@ -21,9 +21,36 @@
 		changePhotoInterval = setInterval(changePhoto, displayTime);
 		paused = false;
 	}
+
+  function setActivePhoto(index) {
+    pause();
+    activePhoto = index + 1;
+  }
 </script>
 
 <div class="screen">
+  <div class="meta">
+    <div class="details">
+      <p class="details--title">{data.items[activePhoto].meta.name}</p>
+      <p class="details--date">{data.items[activePhoto].meta.date}</p>
+      <p class="details--description">{data.items[activePhoto].meta.description}</p>
+    </div>
+    <nav>
+		{#each data.items as item, i}
+			<div class="photo-meta">
+        <ul class="items-list">
+        {#each data.items as item, i}
+          <li>
+            <a class:active={activePhoto === i + 1}
+              onclick={() => setActivePhoto(i)}
+            >{ item.meta.name }</a>
+          </li>
+        {/each}
+        </ul>
+			</div>
+		{/each}
+    </nav>
+  </div>
 	<div class="controls">
 		{#if !paused}
 			<button onclick={() => pause()}
@@ -54,16 +81,6 @@
 				id="photo-{i}"
 				style="background-image: url('{item.mobile}')"
 			>
-				<div class="photo-meta">
-					<p>
-						{item.meta.name}
-						<span>{item.meta.description}</span>
-					</p>
-					<p>
-						{item.meta.location}
-						<date>{item.meta.date}</date>
-					</p>
-				</div>
 			</div>
 		{/each}
 	</div>
@@ -80,6 +97,7 @@
 	.photos,
 	.photo {
 		position: absolute;
+    top: 0;
 		width: 100%;
 		height: 100vh;
 		background-repeat: no-repeat;
@@ -87,43 +105,60 @@
 		background-position-x: center;
 		z-index: 0;
 	}
-	.photo-meta {
-		position: absolute;
-		bottom: 0;
-		background: #fff;
-		display: flex;
-		width: 100%;
-	}
-	.photo-meta p {
-		padding: 1rem;
-		font-size: 0.75rem;
-		white-space: nowrap;
-	}
-	.photo-meta p:first-child {
-		flex-grow: 1;
-		font-size: 1rem;
-	}
 	.photo.active {
 		z-index: 1;
 	}
-	date {
-		display: block;
-		text-align: right;
-		color: #ccc;
+	.meta {
+		position: absolute;
+    height: 25vh;
+		bottom: 0;
+		display: flex;
+    align-items: end;
+		width: 100%;
+    z-index: 2;
+    background-color: hsla(100, 100%, 100%, 0.70);
+	}
+  .details {
+    padding: 1rem;
+  }
+  .details--title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .details--description {
+    font-size: 1rem;
+  }
+	.details--date {
+		color: #666;
 	}
 	.controls {
 		position: absolute;
 		z-index: 2;
-		bottom: 5rem;
-		left: 0rem;
+		bottom: 25vh;
+		right: 1rem;
 		padding: 1em;
-		background-color: hsla(100, 100%, 100%, 0.4);
-		width: 2rem;
-		height: 2rem;
+		width: 3rem;
+		height: 3rem;
+		border-top-left-radius: 100%;
 		border-top-right-radius: 100%;
-		border-bottom-right-radius: 100%;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+    background-color: hsla(100, 100%, 100%, .75);
 	}
+  .controls svg {
+    width: 3rem;
+    height: 3rem;
+  }
+  .items-list {
+    width: 100%;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    text-align: right;
+    color: #666;
+  }
+  .items-list li a.active {
+    color: #111;
+  }
 </style>

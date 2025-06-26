@@ -1,1 +1,0 @@
-import{f as o,a as e}from"./C4oqaVVS.js";import"./vWT_a2yL.js";const m={title:"Looka at me again",date:"2022-04-13"},{title:i,date:s}=m;var p=o("<p>Pisać każdy może.</p>");function n(a){var t=p();e(a,t)}export{n as default,m as metadata};

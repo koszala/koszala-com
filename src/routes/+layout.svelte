@@ -4,6 +4,9 @@
 	let { children } = $props();
 </script>
 
+<header>
+  <a href="{base}/">koszala.com</a>
+</header>
 <main>
 	{@render children()}
 </main>
@@ -18,6 +21,18 @@
 </ul>
 
 <style>
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+  header a {
+    display: block;
+    padding: .5rem 1rem;
+    text-shadow: 0 0 3px white;
+    font-weight: 500;
+  }
 	main {
 		margin: 0 auto;
 	}
