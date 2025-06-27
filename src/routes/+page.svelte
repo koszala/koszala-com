@@ -2,13 +2,14 @@
 	/** @type {import('./$types').PageProps} */
 	let { data } = $props();
 	let displayTime = 5 * 1000;
+	let photoMode = $state('mobile');
 	let activePhoto = $state(0);
 	let paused = $state(false);
 	let changePhotoInterval = setInterval(changePhoto, displayTime);
 
 	function changePhoto() {
 		if (activePhoto === data.items.length) {
-			activePhoto = 1;
+			activePhoto = 0;
 			return;
 		}
 		activePhoto += 1;
@@ -26,7 +27,21 @@
 		pause();
 		activePhoto = index + 1;
 	}
+
+	function windowResized() {
+		if (window.innerWidth > 600) {
+			document.querySelectorAll('.photo').forEach((photo, i) => {
+				photo.style.backgroundImage = `url(${data.items[i].desktop})`;
+			});
+		} else {
+			document.querySelectorAll('.photo').forEach((photo, i) => {
+				photo.style.backgroundImage = `url(${data.items[i].mobile})`;
+			});
+		}
+	}
 </script>
+
+<svelte:window on:resize={windowResized} />
 
 <div class="screen">
 	<div class="photos">
@@ -41,8 +56,8 @@
 	</div>
 	<article>
 		<section>
-			<header>{data.items[activePhoto].meta.name}</header>
 			<date>{data.items[activePhoto].meta.date}</date>
+			<header>{data.items[activePhoto].meta.name}</header>
 			<footer>{data.items[activePhoto].meta.description}</footer>
 		</section>
 		<section>
@@ -105,7 +120,8 @@
 		height: 100%;
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-position-x: center;
+		background-position-x: left;
+		background-position-y: bottom;
 		z-index: 0;
 	}
 	.photo.active {
@@ -126,14 +142,16 @@
 		position: relative;
 	}
 	article header {
-		font-size: 1.5rem;
+		font-size: 1.2rem;
 		font-weight: bold;
 	}
 	article footer {
 		font-size: 1rem;
+		color: #333;
 	}
 	article date {
 		color: #666;
+		font-size: 0.875rem;
 	}
 	.controls {
 		position: absolute;
@@ -160,6 +178,8 @@
 		right: 1rem;
 		text-align: right;
 		color: #666;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 	.items-list li button.active {
 		color: #111;
