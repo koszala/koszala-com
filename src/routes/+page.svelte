@@ -120,8 +120,8 @@
 		height: 100%;
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-position-x: left;
-		background-position-y: bottom;
+		background-position-x: center;
+		background-position-y: center;
 		z-index: 0;
 	}
 	.photo.active {
