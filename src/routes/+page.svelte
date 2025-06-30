@@ -1,5 +1,6 @@
 <script>
 	/** @type {import('./$types').PageProps} */
+	import { onMount } from 'svelte';
 	let { data } = $props();
 	let displayTime = 5 * 1000;
 	let photoMode = $state('mobile');
@@ -39,6 +40,10 @@
 			});
 		}
 	}
+
+	onMount(() => {
+		windowResized();
+	});
 </script>
 
 <svelte:window on:resize={windowResized} />

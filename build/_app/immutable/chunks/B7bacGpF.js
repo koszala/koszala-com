@@ -1,1 +1,0 @@
-import{f as e,a as o}from"./Cn_JJsfe.js";import"./CzQUPo_P.js";import{P as i}from"./DVZrs3w2.js";const m={title:"Looka at meee",date:"2025-04-13"},{title:f,date:d}=m;var n=e("<h1>Powitanie świata</h1> <p>Można wiele pisać, czy ma to sens, tego nie wie nikt.</p>",1);function l(t){var a=n();i(2),o(t,a)}export{l as default,m as metadata};
