@@ -140,29 +140,33 @@
 		width: 100%;
 		justify-content: space-between;
 		z-index: 2;
-		padding: 1rem;
-		background-color: hsla(100, 100%, 100%, 0.7);
 	}
 	article section:first-child {
 		position: relative;
 	}
 	article header {
+		padding: 2px 4px;
 		font-size: 1.2rem;
 		font-weight: bold;
+		background-color: hsla(100, 100%, 100%, 0.75);
 	}
 	article footer {
+		padding: 2px 4px;
 		font-size: 1rem;
 		color: #333;
+		background-color: hsla(100, 100%, 100%, 0.75);
 	}
 	article date {
+		padding: 2px 4px;
 		color: #666;
 		font-size: 0.875rem;
+		background-color: hsla(100, 100%, 100%, 0.75);
 	}
 	.controls {
 		position: absolute;
 		z-index: 2;
 		top: -3rem;
-		right: 1rem;
+		right: 0;
 		padding: 1em;
 		width: 3rem;
 		height: 3rem;
@@ -185,6 +189,10 @@
 		color: #666;
 		text-overflow: ellipsis;
 		white-space: nowrap;
+	}
+	.items-list li button {
+		padding: 2px 4px;
+		background-color: hsla(100, 100%, 100%, 0.7);
 	}
 	.items-list li button.active {
 		color: #111;
