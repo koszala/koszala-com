@@ -1,9 +1,21 @@
 /** @type {import('./$types').PageLoad} */
 export async function load() {
   const assetsBaseUrl = 'https://cdn.koszala.com';
+  const version = 1;
   return {
     items:
       [
+        {
+          desktop: assetsBaseUrl + "/photos/2024-0001-field-desktop.jpg",
+          mobile: assetsBaseUrl + "/photos/2024-0001-field-mobile.jpg",
+          meta: {
+            name: "In field",
+            description: "...",
+            camera: "Huawei P40",
+            date: "2024-06-28",
+            location: "Uciechów, Poland"
+          }
+        },
         {
           desktop: assetsBaseUrl + "/photos/2024-0000-connection-desktop.jpg",
           mobile: assetsBaseUrl + "/photos/2024-0000-connection-mobile.jpg",
@@ -50,7 +62,7 @@ export async function load() {
         },
         {
           desktop: assetsBaseUrl + "/photos/2024-0004-conversation-desktop.jpg",
-          mobile: assetsBaseUrl + "/photos/2024-0004-conversation-mobile.jpg",
+          mobile: assetsBaseUrl + "/photos/2024-0004-conversation-mobile.jpg?v=" + version,
           meta: {
             name: "Conversation",
             description: "Let's talk",
