@@ -1,0 +1,1 @@
+import"./NZTpNUN0.js";import"./DFqH8Xis.js";import{a9 as e,aa as o,ab as i}from"./DCPGXHC4.js";const n={title:"First Post",date:"2025-04-13"},{title:d,date:f}=n;var s=e("<h1>Powitanie świata</h1> <p>Można wiele pisać, czy ma to sens, tego nie wie nikt.</p>",1);function l(t){var a=s();i(2),o(t,a)}export{l as default,n as metadata};
