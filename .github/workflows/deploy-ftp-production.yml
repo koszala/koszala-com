@@ -1,0 +1,73 @@
+name: Deploy to production SFTP
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build_site:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # If you're using pnpm, add this step then change the commands and cache key below to use `pnpm`
+      # - name: Install pnpm
+      #   uses: pnpm/action-setup@v3
+      #   with:
+      #     version: 8
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: build
+        env:
+          BASE_PATH: "/${{ github.event.repository.name }}"
+        run: |
+          npm run build
+          touch build/.nojekyll
+
+      - name: Upload Artifacts
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "build/"
+
+  deploy:
+    needs: build_site
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE,
+      # so your job can access it
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          # Fetch all history for all tags and branches
+          fetch-depth: 0
+
+          # Checkout a specific branch
+          ref: main
+
+      # This is a composite GitHub Action (Linux runner)
+      # for deploying repository content to remote server
+      - name: SFTP-Deploy-Action
+        uses: milanmk/actions-file-deployer@master
+        with:
+          sync: full
+          remote-protocol: ftp
+          remote-host: ${{ secrets.PROD_FTP_HOST }}
+          remote-user: ${{ secrets.PROD_FTP_USER }}
+          remote-password: ${{ secrets.PROD_FTP_PASSWORD }}
+
+          local-path: build
+          # Path for specific folder on server for files deployment
+          remote-path: /koszala-com/build
+
+          # Port for SFTP access to server
+          remote-port: 21
