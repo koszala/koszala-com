@@ -1,0 +1,1 @@
+import"./NZTpNUN0.js";import"./B54VVfUR.js";import{a9 as o,aa as p}from"./EfS0rSuQ.js";const r={title:"Drugi post",date:"2022-04-13"},{title:d,date:n}=r;var e=o("<p>Pisać każdy może.</p>");function f(t){var a=e();p(t,a)}export{f as default,r as metadata};

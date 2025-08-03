@@ -86,6 +86,6 @@ export async function load() {
   items = items.sort(() => Math.random() - 0.5);
 
   return {
-    items: items
+    items: items.slice(0, 4)
   }
 }

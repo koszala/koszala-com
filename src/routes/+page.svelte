@@ -10,6 +10,9 @@
 	let changePhotoInterval = setInterval(changePhoto, displayTime);
 
 	function changePhoto() {
+		if (!data.items) {
+			return;
+		}
 		if (activePhoto >= data.items.length - 1) {
 			activePhoto = 0;
 			return;
@@ -68,6 +71,7 @@
 				<header>{data.items[activePhoto].meta.name}</header>
 				<footer>{data.items[activePhoto].meta.description}</footer>
 			</section>
+
 			<section>
 				<nav class="items-list">
 					<ul>
@@ -83,6 +87,7 @@
 					</ul>
 				</nav>
 			</section>
+
 			<section class="controls">
 				{#if !paused}
 					<button type="button" onclick={() => pause()}
@@ -151,6 +156,7 @@
 		padding: 2px 4px;
 		font-size: 1.2rem;
 		font-weight: bold;
+		margin-bottom: 5px;
 		background-color: hsla(100, 100%, 100%, 0.75);
 	}
 	article footer {
@@ -169,7 +175,7 @@
 	.controls {
 		position: absolute;
 		z-index: 2;
-		top: -3rem;
+		bottom: -3rem;
 		right: 0;
 		padding: 1em;
 		width: 3rem;
@@ -177,16 +183,14 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background-color: hsla(100, 100%, 100%, 0.75);
 	}
 	.controls svg {
 		width: 3rem;
 		height: 3rem;
+		color: #fff;
 	}
 	.items-list {
 		width: 100%;
-		bottom: 1rem;
-		right: 1rem;
 		text-align: right;
 		color: #666;
 		text-overflow: ellipsis;
