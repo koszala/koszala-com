@@ -1,0 +1,1 @@
+import"./NZTpNUN0.js";import"./B54VVfUR.js";import{a9 as m,aa as o}from"./EfS0rSuQ.js";const e={title:"Passage od Samaela to genialny album",date:"2025-08-03",links:[{type:"bandcamp",url:"https://samael.bandcamp.com/album/passage"}]},{title:i,date:r,links:d}=e;var s=m("<h1>Album wybitny</h1>");function b(a){var t=s();o(a,t)}export{b as default,e as metadata};
