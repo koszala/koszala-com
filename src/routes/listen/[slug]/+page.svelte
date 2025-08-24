@@ -19,7 +19,7 @@
 						<iframe
 							title="bandcamp-player"
 							style="border: 0; width: 100%; height: 120px;"
-							src="https://bandcamp.com/EmbeddedPlayer/album={link.id}/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+							src="https://bandcamp.com/EmbeddedPlayer/album={link.id}/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=true/artwork=small/transparent=true/"
 							seamless
 						>
 						</iframe>
