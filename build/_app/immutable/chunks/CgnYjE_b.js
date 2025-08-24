@@ -1,1 +1,0 @@
-import"./NZTpNUN0.js";import"./B54VVfUR.js";import{a9 as o,aa as e}from"./EfS0rSuQ.js";const i={title:"Listen to this shit",date:"2022-04-13"},{title:d,date:n}=i;var m=o("<p>Słuchać każdy może.</p>");function c(t){var a=m();e(t,a)}export{c as default,i as metadata};

@@ -3,17 +3,27 @@
 	export let data;
 </script>
 
-<h1>Lista rzeczy do obejrzenia</h1>
-<ul>
-	{#each data.posts as post}
-		<li>
-			<a href="{base}{post.link}">{post.title}</a>
-			<span>Published: {post.date}</span>
-		</li>
-	{/each}
-</ul>
+<article>
+	<h1>Is it something that you are looking for? 🧐</h1>
+	<ul>
+		{#each data.posts as post}
+			<li>
+				<a href="{base}{post.link}">{post.title}</a>
+				<span>Published: {post.date}</span>
+			</li>
+		{/each}
+	</ul>
+</article>
 
 <style>
+	article {
+		max-width: 100rem;
+		margin: 3rem auto 5rem;
+		padding: 0 1rem;
+	}
+	h1 {
+		font-size: 1.4rem;
+	}
 	li:not(.first) {
 		margin-top: 1rem;
 	}
@@ -23,7 +33,7 @@
 		font-size: 0.8rem;
 	}
 	a {
-		font-size: 3rem;
+		font-size: 2rem;
 		color: var(--accent);
 	}
 </style>

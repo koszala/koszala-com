@@ -5,6 +5,15 @@
 	let { children } = $props();
 </script>
 
+<svelte:head>
+	<link
+		rel="preload"
+		as="font"
+		href="https://cdn.koszala.com/fonts/Roboto/static/Roboto-Regular.woff2"
+		type="font/woff2"
+		crossorigin="anonymous"
+	/>
+</svelte:head>
 <header>
 	<a href="{base}/">koszala.com</a>
 </header>
@@ -24,7 +33,7 @@
 		>
 	</li>
 	<li>
-		<a href="{base}/look" class:active={$page.url.pathname == '/look'}
+		<a href="{base}/look" class:active={$page.url.pathname.includes('look')}
 			><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
 				><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path
 					fill="currentColor"

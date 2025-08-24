@@ -3,24 +3,62 @@
 	export let data;
 </script>
 
-<div>
-	<h1>{data.title}</h1>
-	<p>Published: {data.date}</p>
+<article>
+	<header>
+		<h1>{data.title}</h1>
+		<date>{data.date}</date>
+	</header>
 
-	<svelte:component this={data.content} />
-	<p><a href="{base}/read">Back to list</a></p>
-</div>
+	<main>
+		<svelte:component this={data.content} />
+
+		<section>
+			{#each data.links as link}
+				<div>
+					{#if link.type === 'bandcamp'}
+						<iframe
+							title="bandcamp-player"
+							style="border: 0; width: 100%; height: 120px;"
+							src="https://bandcamp.com/EmbeddedPlayer/album={link.id}/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+							seamless
+						>
+						</iframe>
+					{/if}
+				</div>
+			{/each}
+		</section>
+	</main>
+	<footer>
+		<p><a href="{base}/listen">Back to list</a></p>
+	</footer>
+</article>
 
 <style>
 	h1 {
-		font-size: 3rem;
+		font-size: 2.4rem;
+		font-family: Roboto;
 	}
-	div :global(img) {
+	article {
+		max-width: 100rem;
+		margin: 3rem auto 5rem;
+		padding: 0 1rem;
+	}
+	article :global(h2) {
+		font-size: 2rem;
+	}
+	article :global(p) {
+		margin-bottom: 1rem;
+	}
+	header date {
+		color: var(--gray-20);
 		display: block;
-		margin: 0 auto;
-		width: min(100%, 500px);
 	}
-	div :global(figcaption) {
-		text-align: center;
+
+	main {
+		margin: 2rem 0;
+	}
+
+	footer {
+		margin-top: 2rem;
 	}
 </style>
