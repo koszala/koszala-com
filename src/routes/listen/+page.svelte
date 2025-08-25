@@ -3,8 +3,12 @@
 	export let data;
 </script>
 
+<svelte:head>
+	<title>Sounds familiar?</title>
+</svelte:head>
+
 <article>
-	<h1>Do you listen? Do you know how to listen?</h1>
+	<h1>Do you even listen?<br />Do you know how to listen?</h1>
 	<ul>
 		{#each data.posts as post}
 			<li>
@@ -22,7 +26,8 @@
 		padding: 0 1rem;
 	}
 	h1 {
-		font-size: 1.4rem;
+		font-size: 1.5rem;
+		font-family: RobotoCondensed-Bold;
 	}
 	li:not(.first) {
 		margin-top: 1rem;
@@ -33,6 +38,7 @@
 		font-size: 0.8rem;
 	}
 	a {
+		font-family: RobotoCondensed;
 		font-size: 1.4rem;
 		color: var(--accent);
 	}

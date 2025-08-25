@@ -3,6 +3,9 @@
 	export let data;
 </script>
 
+<svelte:head>
+	<title>Looking for something?</title>
+</svelte:head>
 <article>
 	<h1>Is it something that you are looking for? 🧐</h1>
 	<ul>
@@ -22,7 +25,8 @@
 		padding: 0 1rem;
 	}
 	h1 {
-		font-size: 1.4rem;
+		font-size: 1.5rem;
+		font-family: RobotoCondensed-Bold;
 	}
 	li:not(.first) {
 		margin-top: 1rem;
@@ -35,5 +39,6 @@
 	a {
 		font-size: 2rem;
 		color: var(--accent);
+		font-family: RobotoCondensed;
 	}
 </style>

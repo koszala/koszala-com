@@ -1,0 +1,2 @@
+import"./NZTpNUN0.js";import"./CsFaWhAb.js";import{ab as e,ac as a,ad as r}from"./CASqElvt.js";const s={title:"Year 2007",date:"2007-12-31",galleryUrl:"https://cdn.koszala.com/api/v1/?folder=photos/2007"},{title:m,date:d,galleryUrl:c}=s;var n=e(`<h2>Not much to see here</h2> <p>Year 2007. It’s not Cyberpunk 2077, not even cyberpunk.
+Just few photos good enough to show here</p>`,1);function f(t){var o=n();r(2),a(t,o)}export{f as default,s as metadata};

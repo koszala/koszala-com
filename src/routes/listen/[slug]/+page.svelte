@@ -3,6 +3,9 @@
 	export let data;
 </script>
 
+<svelte:head>
+	<title>{data.title}</title>
+</svelte:head>
 <article>
 	<header>
 		<h1>{data.title}</h1>
@@ -10,7 +13,9 @@
 	</header>
 
 	<main>
-		<svelte:component this={data.content} />
+		<section class="description">
+			<svelte:component this={data.content} />
+		</section>
 
 		<section>
 			{#each data.links as link}
@@ -36,7 +41,7 @@
 <style>
 	h1 {
 		font-size: 2.4rem;
-		font-family: Roboto;
+		font-family: RobotoCondensed-Bold;
 	}
 	article {
 		max-width: 100rem;
@@ -55,6 +60,10 @@
 	}
 
 	main {
+		margin: 2rem 0;
+	}
+
+	.description {
 		margin: 2rem 0;
 	}
 

@@ -1,0 +1,1 @@
+import"./NZTpNUN0.js";import"./CsFaWhAb.js";import{ab as o,ac as e}from"./CASqElvt.js";const n={title:"Dormant Ordeal. Just great",date:"2025-07-03",links:[{type:"bandcamp",id:"1599956185"}]},{title:d,date:i,links:l}=n;var r=o("<p>Some song I can’t get enough</p>");function c(t){var a=r();e(t,a)}export{c as default,n as metadata};

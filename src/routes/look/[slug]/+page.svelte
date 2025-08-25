@@ -3,6 +3,9 @@
 	export let data;
 </script>
 
+<svelte:head>
+	<title>{data.title}</title>
+</svelte:head>
 <article>
 	<header>
 		<h1>{data.title}</h1>
@@ -46,7 +49,7 @@
 <style>
 	h1 {
 		font-size: 2.4rem;
-		font-family: Roboto;
+		font-family: RobotoCondensed-Bold;
 	}
 	article {
 		max-width: 100rem;
@@ -54,7 +57,9 @@
 		padding: 0 1rem;
 	}
 	article :global(h2) {
-		font-size: 2rem;
+		font-size: 1.5rem;
+		font-family: RobotoCondensed;
+		line-height: 1.5;
 	}
 	article :global(p) {
 		margin-top: 1rem;
@@ -71,6 +76,7 @@
 	date {
 		color: var(--gray-20);
 		display: block;
+		font-family: Roboto-Light;
 	}
 	header {
 		margin: 1rem 0;

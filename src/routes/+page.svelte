@@ -56,6 +56,10 @@
 
 <svelte:window on:resize={windowResized} />
 
+<svelte:head>
+	<title>koszala.com</title>
+</svelte:head>
+
 <div bind:this={root} class="screen">
 	<div class="photos photos-mobile">
 		{#each data.items as item, i}
@@ -165,10 +169,10 @@
 		z-index: 2;
 	}
 	article header {
-		padding: 2px 4px;
+		padding: 8px 4px;
 		font-size: 1.2rem;
 		font-weight: bold;
-		margin-bottom: 5px;
+		margin-bottom: 0;
 		background-color: hsla(100, 100%, 100%, 0.75);
 	}
 	article footer {
